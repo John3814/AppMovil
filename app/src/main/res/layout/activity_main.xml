@@ -26,42 +26,42 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
         android:text="@string/Button_ingreso"
-        app:layout_constraintBottom_toTopOf="@+id/button2"
+        app:layout_constraintBottom_toTopOf="@+id/Button_egresos"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/Button_egresos"
         android:layout_width="379dp"
         android:layout_height="wrap_content"
-        android:text="EGRESOS"
-        app:layout_constraintBottom_toTopOf="@+id/button3"
+        android:text="@string/Button_egreso"
+        app:layout_constraintBottom_toTopOf="@+id/Button_cuentas_cobrar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Button_ingreso" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/Button_cuentas_cobrar"
         android:layout_width="379dp"
         android:layout_height="wrap_content"
-        android:text="CUENTAS POR COBRAR"
-        app:layout_constraintBottom_toTopOf="@+id/button4"
+        android:text="@string/Button_cuentas_por_cobrar"
+        app:layout_constraintBottom_toTopOf="@+id/Button_cuentas_pagar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button2" />
+        app:layout_constraintTop_toBottomOf="@+id/Button_egresos" />
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/Button_cuentas_pagar"
         android:layout_width="379dp"
         android:layout_height="wrap_content"
-        android:text="CUENTAS POR PAGAR"
+        android:text="@string/Button_cuentas_por_pagar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button3" />
+        app:layout_constraintTop_toBottomOf="@+id/Button_cuentas_cobrar" />
 
     <TextView
         android:id="@+id/textView2"
@@ -91,7 +91,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="40dp"
         android:text="TextView"
-        app:layout_constraintBottom_toTopOf="@+id/button6"
+        app:layout_constraintBottom_toTopOf="@+id/Botton_balance"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.473"
         app:layout_constraintStart_toStartOf="parent" />
@@ -105,14 +105,14 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.473"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button4" />
+        app:layout_constraintTop_toBottomOf="@+id/Button_cuentas_pagar" />
 
     <Button
-        android:id="@+id/button6"
+        android:id="@+id/Botton_balance"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="28dp"
-        android:text="BALANCE"
+        android:text="@string/Button_balance"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.478"
