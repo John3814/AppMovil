@@ -13,4 +13,5 @@
     <string name="Nombre">NOMBRE</string>
     <string name="No_id">No° ID:</string>
     <string name="No_telefono">No° TELEFONO:</string>
+    <string name="Datos_acreedor">DATOS ACREDOR</string>
 </resources>
