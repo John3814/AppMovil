@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">AppMovil</string>
-
+    <string name="Button_ingreso">INGRESO</string>
+    <string name="Tittle">FINANZAS MOVILES</string>
 </resources>
