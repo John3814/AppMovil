@@ -6,4 +6,11 @@
     <string name="Button_cuentas_por_pagar">CUENTAS POR PAGAR</string>
     <string name="Button_balance">BALANCE</string>
     <string name="Tittle">FINANZAS MOVILES</string>
+    <string name="Concepto_cuenta">CONCEPTO:</string>
+    <string name="Valor">VALOR</string>
+    <string name="Fecha_limie">FECHA LIMITE:</string>
+    <string name="Datos_deudor">DATOS DEUDOR:</string>
+    <string name="Nombre">NOMBRE</string>
+    <string name="No_id">No° ID:</string>
+    <string name="No_telefono">No° TELEFONO:</string>
 </resources>

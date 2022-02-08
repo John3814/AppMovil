@@ -8,6 +8,7 @@ import android.widget.Button
 class MainActivity : AppCompatActivity() {
 
     var boton : Button?=null
+    var boton_2 : Button?=null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -17,6 +18,12 @@ class MainActivity : AppCompatActivity() {
 
         boton!!.setOnClickListener{
             setContentView(R.layout.activity_ingreso)
+        }
+
+        boton_2 = findViewById(R.id.Button_cuentas_cobrar)
+
+        boton_2!!.setOnClickListener{
+            setContentView(R.layout.cuenta_por_cobrar)
         }
 
     }
