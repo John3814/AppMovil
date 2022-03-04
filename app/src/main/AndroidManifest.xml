@@ -9,9 +9,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppMovil">
-
         <activity
-            android:name=".IngresoActivity"
+            android:name=".IngresoActivity" />
+        <activity
+            android:name=".EgresoActivity" />
+        <activity
+            android:name=".Cuenta_por_cobrarActivity" />
+        <activity
+            android:name=".Cuenta_por_pagarActivity" />
+        <activity
+            android:name=".LobbyActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -19,6 +26,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+
+
+
     </application>
 
 </manifest>
