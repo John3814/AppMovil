@@ -8,9 +8,9 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 
 class IngresoActivity: AppCompatActivity()  {
-    var txtFecha:EditText?=null
-    var txtConcepto:EditText?=null
-    var txtValor:EditText?=null
+    //var txtFecha:EditText?=null
+    //var txtConcepto:EditText?=null
+    //var txtValor:EditText?=null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_ingreso)

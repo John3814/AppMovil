@@ -10,7 +10,7 @@
         <entry key="..\:/Users/ediso/AndroidStudioProjects/AppMovil/app/src/main/res/drawable/ic_baseline_sell_24.xml" value="0.191" />
         <entry key="..\:/Users/ediso/AndroidStudioProjects/AppMovil/app/src/main/res/layout/activity_egreso.xml" value="0.33" />
         <entry key="..\:/Users/ediso/AndroidStudioProjects/AppMovil/app/src/main/res/layout/activity_ingreso.xml" value="0.25" />
-        <entry key="..\:/Users/ediso/AndroidStudioProjects/AppMovil/app/src/main/res/layout/activity_main.xml" value="0.1641337386018237" />
+        <entry key="..\:/Users/ediso/AndroidStudioProjects/AppMovil/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/Users/ediso/AndroidStudioProjects/AppMovil/app/src/main/res/layout/cuenta_por_cobrar.xml" value="0.25" />
         <entry key="..\:/Users/ediso/AndroidStudioProjects/AppMovil/app/src/main/res/layout/cuenta_por_pagar.xml" value="0.33" />
         <entry key="..\:/Users/ediso/AndroidStudioProjects/AppMovil/app/src/main/res/layout/prueba.xml" value="0.25" />
@@ -30,5 +30,12 @@
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.1641337386018237" />
+      </ProjectState>
+    </option>
   </component>
 </project>
