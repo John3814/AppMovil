@@ -10,11 +10,11 @@ class SQLite(
     version: Int
 ) : SQLiteOpenHelper(context, name, factory, version) {
     override fun onCreate(db: SQLiteDatabase?) {
-       db?.execSQL("create table Ingresos (id int PRIMARY KEY AUTOINCREMENT ,fecha  text,concepto text,valor int)")
+       db?.execSQL("create table Ingresos (id INTEGER PRIMARY KEY  AUTOINCREMENT, date  text,concept text,value int)")
     }
 
     override fun onUpgrade(p0: SQLiteDatabase?, p1: Int, p2: Int) {
-        TODO("Not yet implemented")
+
     }
 
 }

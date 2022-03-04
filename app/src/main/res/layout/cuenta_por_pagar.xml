@@ -56,7 +56,7 @@
         android:layout_marginTop="16dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextMultiLine2"
-        app:srcCompat="@drawable/ic_baseline_paid_24" />
+        app:srcCompat="@drawable/ic_baseline_monetization_on_24" />
 
     <TextView
         android:id="@+id/textView9"
