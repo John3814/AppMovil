@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">AppMovil</string>
+    <string name="button_income">ADD INCOME</string>
+    <string name="button_expenditure">ADD EXPENDITURE</string>
+    <string name="button_accounts_receivable">ACCOUNTS RECEIVABLE</string>
+    <string name="button_accounts_payable">ACCOUNTS PAYABLE</string>
+    <string name="button_balance">BALANCE</string>
+    <string name="button_add">ADD</string>
+    <string name="textView_account_concept">CONCEPT:</string>
+    <string name="textView_value">VALUE:</string>
+    <string name="textView_deadline">DEADLINE:</string>
+    <string name="textView_debtor_data">DEBTOR_DATA:</string>
+    <string name="textView_accreditor_data">ACCREDITOR DATA:</string>
+    <string name="textView_name">NAME:</string>
+    <string name="textView_id">No° ID:</string>
+    <string name="textView_phone_number">No° PHONE:</string>
+    <string name="textView_date">DATE:</string>
+</resources>

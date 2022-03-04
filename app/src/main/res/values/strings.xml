@@ -1,17 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">AppMovil</string>
-    <string name="Button_ingreso">INGRESO</string>
-    <string name="Button_egreso">EGRESO</string>
-    <string name="Button_cuentas_por_cobrar">CUENTAS POR COBRAR</string>
-    <string name="Button_cuentas_por_pagar">CUENTAS POR PAGAR</string>
-    <string name="Button_balance">BALANCE</string>
-    <string name="Tittle">FINANZAS MOVILES</string>
-    <string name="Concepto_cuenta">CONCEPTO:</string>
-    <string name="Valor">VALOR</string>
-    <string name="Fecha_limie">FECHA LIMITE:</string>
-    <string name="Datos_deudor">DATOS DEUDOR:</string>
-    <string name="Nombre">NOMBRE</string>
-    <string name="No_id">No° ID:</string>
-    <string name="No_telefono">No° TELEFONO:</string>
-    <string name="Datos_acreedor">DATOS ACREDOR</string>
+    <string name="button_income">AGREGAR INGRESO</string>
+    <string name="button_expenditure">AGREGAR EGRESO</string>
+    <string name="button_accounts_receivable">CUENTAS POR COBRAR</string>
+    <string name="button_accounts_payable">CUENTAS POR PAGAR</string>
+    <string name="button_balance">BALANCE</string>
+    <string name="button_add">AGREGAR</string>
+    <string name="textView_account_concept">CONCEPTO:</string>
+    <string name="textView_value">VALOR:</string>
+    <string name="textView_deadline">FECHA LIMITE:</string>
+    <string name="textView_debtor_data">DATOS DEUDOR:</string>
+    <string name="textView_accreditor_data">DATOS ACREDOR:</string>
+    <string name="textView_name">NOMBRE:</string>
+    <string name="textView_id">No° ID:</string>
+    <string name="textView_phone_number">No° TELEFONO:</string>
+    <string name="textView_date">FECHA:</string>
 </resources>

@@ -14,12 +14,13 @@ class IngresoActivity: AppCompatActivity()  {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_ingreso)
-
+        /*
         txtFecha=findViewById(R.id.txtFecha)
         txtConcepto=findViewById(R.id.txtConcepto)
         txtValor=findViewById(R.id.txtValor)
-
+*/
     }
+    /*
     fun insertar(view:View){
         var con=SQLite(this,"basemovil",null,1)
         var baseDatos=con.writableDatabase
@@ -41,5 +42,9 @@ class IngresoActivity: AppCompatActivity()  {
         }else{
             Toast.makeText(this, "los campos deben tener texto", Toast.LENGTH_LONG).show()
         }
+
+
     }
+
+     */
 }
