@@ -6,6 +6,11 @@ import android.widget.EditText
 import androidx.appcompat.app.AppCompatActivity
 
 class Cuenta_por_cobrarActivity: AppCompatActivity() {
+
+    var txtDate:EditText?=null
+    var txtConcept:EditText?=null
+    var txtV:EditText?=null
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_cuenta_por_cobrar)

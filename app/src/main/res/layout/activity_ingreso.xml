@@ -20,7 +20,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtValor"
+        app:layout_constraintTop_toBottomOf="@+id/txtValue"
         app:layout_constraintVertical_bias="0.0" />
 
     <ImageView
@@ -54,11 +54,11 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="24dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtConcepto"
+        app:layout_constraintTop_toBottomOf="@+id/txtConcept"
         app:srcCompat="@drawable/ic_baseline_monetization_on_24" />
 
     <EditText
-        android:id="@+id/txtConcepto"
+        android:id="@+id/txtConcept"
         android:layout_width="0dp"
         android:layout_height="62dp"
         android:layout_marginStart="16dp"
@@ -75,7 +75,7 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 
     <EditText
-        android:id="@+id/txtValor"
+        android:id="@+id/txtValue"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"

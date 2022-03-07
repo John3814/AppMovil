@@ -26,7 +26,7 @@
         app:srcCompat="@drawable/ic_baseline_sell_24" />
 
     <EditText
-        android:id="@+id/editTextTextMultiLine2"
+        android:id="@+id/txtConcept"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -55,7 +55,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextMultiLine2"
+        app:layout_constraintTop_toBottomOf="@+id/txtConcept"
         app:srcCompat="@drawable/ic_baseline_monetization_on_24" />
 
     <TextView
@@ -69,7 +69,7 @@
         app:layout_constraintTop_toTopOf="@+id/imageView6" />
 
     <EditText
-        android:id="@+id/editTextNumber"
+        android:id="@+id/txtValue"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -115,7 +115,7 @@
         app:layout_constraintTop_toTopOf="@+id/imageView8" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/txtName"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -139,7 +139,7 @@
         app:layout_constraintTop_toTopOf="@+id/imageView9" />
 
     <EditText
-        android:id="@+id/editTextNumber3"
+        android:id="@+id/txtNameID"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -157,7 +157,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextNumber"
+        app:layout_constraintTop_toBottomOf="@+id/txtValue"
         app:srcCompat="@drawable/ic_baseline_edit_calendar_24" />
 
     <ImageView
@@ -184,7 +184,7 @@
         app:layout_constraintVertical_bias="0.571" />
 
     <EditText
-        android:id="@+id/editTextNumber4"
+        android:id="@+id/txtPhone"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -207,7 +207,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextNumber4" />
+        app:layout_constraintTop_toBottomOf="@+id/txtPhone" />
 
     <ImageView
         android:id="@+id/imageView9"
@@ -216,7 +216,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName"
+        app:layout_constraintTop_toBottomOf="@+id/txtName"
         app:srcCompat="@drawable/ic_baseline_contact_page_24" />
 
     <ImageView
@@ -226,7 +226,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextNumber3"
+        app:layout_constraintTop_toBottomOf="@+id/txtNameID"
         app:srcCompat="@drawable/ic_baseline_contact_phone_24" />
 
     <EditText

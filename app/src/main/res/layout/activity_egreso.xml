@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:onClick="insertar">
 
     <Button
         android:id="@+id/button2"
@@ -13,12 +14,13 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="16dp"
+        android:onClick="insertar"
         android:text="@string/button_add"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtValor"
+        app:layout_constraintTop_toBottomOf="@+id/txtValue"
         app:layout_constraintVertical_bias="0.0" />
 
     <ImageView
@@ -52,14 +54,15 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="24dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtConcepto"
+        app:layout_constraintTop_toBottomOf="@+id/txtConcept"
         app:srcCompat="@drawable/ic_baseline_monetization_on_24" />
 
     <EditText
-        android:id="@+id/txtConcepto"
+        android:id="@+id/txtConcept"
         android:layout_width="0dp"
         android:layout_height="62dp"
         android:layout_marginStart="16dp"
+        android:layout_marginTop="12dp"
         android:layout_marginEnd="16dp"
         android:ems="10"
         android:fontFamily="sans-serif-light"
@@ -69,11 +72,12 @@
         android:nestedScrollingEnabled="false"
         android:singleLine="false"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 
     <EditText
-        android:id="@+id/txtValor"
+        android:id="@+id/txtValue"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
