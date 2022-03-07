@@ -57,10 +57,6 @@ class Cuenta_por_cobrarActivity: AppCompatActivity() {
         findViewById<EditText>(R.id.textDateCobrarLimit).setText("$day/$month/$year")
     }
 
-    private fun jumpActivityLobby(){
-        val intent: Intent = Intent(this,LobbyActivity::class.java)
-        startActivity(intent)
-    }
 
     fun insertar(view: View){
         var con=SQLite(this,"basemovil",null,1)
@@ -77,14 +73,15 @@ class Cuenta_por_cobrarActivity: AppCompatActivity() {
         if(fecha.isEmpty()==false && concepto.isEmpty()==false && valor.isEmpty()==false ){
             var registro= ContentValues()
 
+            registro.put("date",fecha)
             registro.put("concept",concepto)
             registro.put("value",valor)
-            registro.put("date",fecha)
             registro.put("dateLim",fechaLim)
             registro.put("name",nombre)
             registro.put("nameID",nombreID)
             registro.put("phone",celular)
-            baseDatos.insert("CuentasxCobrar",null,registro)
+
+            baseDatos.insert("CuentaxCobrar",null,registro)
             txtDate?.setText("")
             txtConcept?.setText("")
             txtValue?.setText("")

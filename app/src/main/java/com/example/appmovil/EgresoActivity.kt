@@ -39,10 +39,7 @@ class EgresoActivity: AppCompatActivity() {
         findViewById<EditText>(R.id.textDateEgreso).setText("$day/$month/$year")
     }
 
-    private fun jumpActivityLobby() {
-        val intent: Intent = Intent(this, LobbyActivity::class.java)
-        startActivity(intent)
-    }
+
 
     fun insertar(view:View){
         var con=SQLite(this,"basemovil",null,1)
