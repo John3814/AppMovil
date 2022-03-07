@@ -98,7 +98,7 @@
         android:layout_marginStart="16dp"
         android:ems="10"
         android:hint="@string/textView_search"
-        android:inputType="textPersonName"
+        android:inputType="number"
         app:layout_constraintStart_toEndOf="@+id/imageView13"
         app:layout_constraintTop_toTopOf="@+id/imageView13" />
 

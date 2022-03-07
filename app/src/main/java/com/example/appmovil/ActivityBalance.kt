@@ -29,14 +29,13 @@ class ActivityBalance : AppCompatActivity(), AdapterView.OnItemSelectedListener 
         findViewById<Button>(R.id.buttonSearch).setOnClickListener(){
             searchConsult()
         }
-
     }
 
     private fun searchConsult(){
-        val schem =selectSpinnerTable()
-        val fila:Cursor
+        val schem = selectSpinnerTable()
         val baseDatos=con.writableDatabase
-        fila=baseDatos.rawQuery("select id,date,concept,value from $schem where id='$balanceID' " ,null)
+        val valu=balanceID?.text
+        val fila=baseDatos.rawQuery("select id,date,concept,value from $schem where id='$valu'" ,null)
         llenarTabla(fila)
     }
 
