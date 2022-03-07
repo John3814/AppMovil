@@ -24,13 +24,12 @@
     <string-array name="array_List_By">
         <item>Ingreso</item>
         <item>Egreso</item>
-        <item>Cuantas por pagar</item>
+        <item>Cuentas por pagar</item>
         <item>Cuentas por cobrar</item>
     </string-array>
     <string-array name="array_Sort_By">
         <item>ID</item>
         <item>Fecha</item>
-        <item>Menor a mayor</item>
         <item>Mayor a menor</item>
     </string-array>
 </resources>
