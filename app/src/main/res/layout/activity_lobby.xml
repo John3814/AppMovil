@@ -91,7 +91,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="40dp"
         android:text="TextView"
-        app:layout_constraintBottom_toTopOf="@+id/Botton_balance"
+        app:layout_constraintBottom_toTopOf="@+id/Button_balance"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.473"
         app:layout_constraintStart_toStartOf="parent" />
@@ -108,7 +108,7 @@
         app:layout_constraintTop_toBottomOf="@+id/Button_cuentas_pagar" />
 
     <Button
-        android:id="@+id/Botton_balance"
+        android:id="@+id/Button_balance"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="28dp"

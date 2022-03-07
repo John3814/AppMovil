@@ -4,19 +4,28 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
+import android.widget.Spinner
 import android.widget.TableLayout
 import android.widget.TextView
 
 class ActivityBalance : AppCompatActivity() {
     var tlBalance:TableLayout?=null
+    var spinnerListBy=0
+    var spinnerBySort=0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_balance)
 
         tlBalance=findViewById(R.id.tlBalance)
+
+        spinnerListBy=findViewById<Spinner>(R.id.spinnerList).selectedItemPosition
+        spinnerBySort=findViewById<Spinner>(R.id.spinnerSort).selectedItemPosition
+
         llenarTabla()
+
     }
+
 
     fun llenarTabla(){
 

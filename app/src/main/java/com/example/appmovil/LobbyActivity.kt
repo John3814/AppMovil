@@ -25,6 +25,9 @@ class LobbyActivity : AppCompatActivity() {
         findViewById<Button>(R.id.Button_cuentas_pagar).setOnClickListener(){
             jumpActivityCuentaPorPagar()
         }
+        findViewById<Button>(R.id.Button_balance).setOnClickListener(){
+            jumpActivityBalance()
+        }
 
     }
 
@@ -44,5 +47,10 @@ class LobbyActivity : AppCompatActivity() {
         val intent: Intent = Intent(this,Cuenta_por_pagarActivity::class.java)
         startActivity(intent)
     }
+    private fun jumpActivityBalance(){
+        val intent: Intent = Intent(this,ActivityBalance::class.java)
+        startActivity(intent)
+    }
+
 
 }

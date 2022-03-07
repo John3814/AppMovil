@@ -16,9 +16,21 @@
     <string name="textView_id">No° ID:</string>
     <string name="textView_phone_number">No° PHONE:</string>
     <string name="textView_date">DATE:</string>
-    <string name="textView_search">SEARCH:</string>
+    <string name="textView_search">SEARCH BY ID</string>
     <string name="textView_list_by">LIST BY:</string>
     <string name="textView_sort_by">SORT BY:</string>
     <string name="button_search">SEARCH</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string-array name="array_List_By">
+        <item>Ingress</item>
+        <item>Egress</item>
+        <item>account payable</item>
+        <item>account receivable</item>
+    </string-array>
+    <string-array name="array_Sort_By">
+        <item>ID</item>
+        <item>Date</item>
+        <item>minor to major</item>
+        <item>major to minor</item>
+    </string-array>
 </resources>

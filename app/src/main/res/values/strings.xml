@@ -17,8 +17,20 @@
     <string name="textView_phone_number">No° TELEFONO:</string>
     <string name="textView_date">FECHA:</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="textView_search">BUSCAR:</string>
+    <string name="textView_search">BUSCAR POR ID</string>
     <string name="textView_list_by">LISTAR POR:</string>
     <string name="textView_sort_by">ORDENAR POR:</string>
     <string name="button_search">BUSCAR</string>
+    <string-array name="array_List_By">
+        <item>Ingreso</item>
+        <item>Egreso</item>
+        <item>Cuantas por pagar</item>
+        <item>Cuentas por cobrar</item>
+    </string-array>
+    <string-array name="array_Sort_By">
+        <item>ID</item>
+        <item>Fecha</item>
+        <item>Menor a mayor</item>
+        <item>Mayor a menor</item>
+    </string-array>
 </resources>
