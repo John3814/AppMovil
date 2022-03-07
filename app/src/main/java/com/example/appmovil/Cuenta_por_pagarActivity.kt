@@ -84,7 +84,7 @@ class Cuenta_por_pagarActivity: AppCompatActivity() {
             registro.put("name",nombre)
             registro.put("nameID",nombreID)
             registro.put("phone",celular)
-            baseDatos.insert("CuentasxPagar",null,registro)
+            baseDatos.insert("CuentaxPagar",null,registro)
             txtDate?.setText("")
             txtConcept?.setText("")
             txtValue?.setText("")
