@@ -1,14 +1,33 @@
 package com.example.appmovil
 
+import android.content.ContentValues
 import android.content.Intent
 import android.os.Bundle
+import android.view.View
 import android.widget.EditText
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 
 class Cuenta_por_pagarActivity: AppCompatActivity() {
+    var txtDate:EditText?=null
+    var txtConcept:EditText?=null
+    var txtValue:EditText?=null
+    var txtDateLim:EditText?=null
+    var txtName:EditText?=null
+    var txtNameID:EditText?=null
+    var txtPhone:EditText?=null
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_cuenta_por_pagar)
+
+        txtDate=findViewById(R.id.textDatePagar)
+        txtConcept=findViewById(R.id.txtConcept)
+        txtValue=findViewById(R.id.txtValue)
+        txtDateLim=findViewById(R.id.textDatePagarLimit)
+        txtName=findViewById(R.id.txtName)
+        txtNameID=findViewById(R.id.txtNameID)
+        txtPhone=findViewById(R.id.txtPhone)
 
 
         findViewById<EditText>(R.id.textDatePagar).setOnClickListener(){
@@ -41,5 +60,42 @@ class Cuenta_por_pagarActivity: AppCompatActivity() {
     private fun jumpActivityLobby(){
         val intent: Intent = Intent(this,LobbyActivity::class.java)
         startActivity(intent)
+    }
+
+    fun insertar(view: View){
+        var con=SQLite(this,"basemovil",null,1)
+        var baseDatos=con.writableDatabase
+
+        var fecha=txtDate?.text.toString()
+        var concepto=txtConcept?.text.toString()
+        var valor=txtValue?.text.toString()
+        var fechaLim=txtDateLim?.text.toString()
+        var nombre=txtName?.text.toString()
+        var nombreID=txtNameID?.text.toString()
+        var celular=txtPhone?.text.toString()
+
+        if(fecha.isEmpty()==false && concepto.isEmpty()==false && valor.isEmpty()==false ){
+            var registro= ContentValues()
+
+            registro.put("concept",concepto)
+            registro.put("value",valor)
+            registro.put("date",fecha)
+            registro.put("dateLim",fechaLim)
+            registro.put("name",nombre)
+            registro.put("nameID",nombreID)
+            registro.put("phone",celular)
+            baseDatos.insert("CuentasxPagar",null,registro)
+            txtDate?.setText("")
+            txtConcept?.setText("")
+            txtValue?.setText("")
+            txtDateLim?.setText("")
+            txtName?.setText("")
+            txtNameID?.setText("")
+            txtPhone?.setText("")
+            Toast.makeText(this, "la cuenta por pagar se ha guardado", Toast.LENGTH_LONG).show()
+            finish()
+        }else{
+            Toast.makeText(this, "los campos deben tener texto", Toast.LENGTH_LONG).show()
+        }
     }
 }

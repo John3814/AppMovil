@@ -11,7 +11,8 @@ import androidx.appcompat.app.AppCompatActivity
 class EgresoActivity: AppCompatActivity() {
     var txtDate:EditText?=null
     var txtConcept:EditText?=null
-    var txtV:EditText?=null
+    var txtValue:EditText?=null
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -19,7 +20,7 @@ class EgresoActivity: AppCompatActivity() {
 
         txtDate=findViewById(R.id.textDateEgreso)
         txtConcept=findViewById(R.id.txtConcept)
-        txtV=findViewById(R.id.txtValue)
+        txtValue=findViewById(R.id.txtValue)
 
 
         findViewById<EditText>(R.id.textDateEgreso).setOnClickListener() {
@@ -49,7 +50,7 @@ class EgresoActivity: AppCompatActivity() {
 
         var fecha=txtDate?.text.toString()
         var concepto=txtConcept?.text.toString()
-        var valor=txtV?.text.toString()
+        var valor=txtValue?.text.toString()
 
         if(fecha.isEmpty()==false && concepto.isEmpty()==false && valor.isEmpty()==false){
             var registro=ContentValues()
@@ -57,10 +58,10 @@ class EgresoActivity: AppCompatActivity() {
             registro.put("concept",concepto)
             registro.put("value",valor)
             registro.put("date",fecha)
-            baseDatos.insert("Ingresos",null,registro)
+            baseDatos.insert("Egresos",null,registro)
             txtDate?.setText("")
             txtConcept?.setText("")
-            txtV?.setText("")
+            txtValue?.setText("")
             Toast.makeText(this, "el egreso se ha guardado", Toast.LENGTH_LONG).show()
             finish()
         }else{
