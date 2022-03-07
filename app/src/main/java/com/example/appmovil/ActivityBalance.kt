@@ -25,13 +25,29 @@ class ActivityBalance : AppCompatActivity() {
         llenarTabla()
 
     }
+    private fun selectSpinnerTable(): String {
+        return when (spinnerListBy) {
+            0 -> {
+                "Ingresos"
+            }
+            1 -> {
+                "Egresos"
+            }
+            2 -> {
+                "CuentaxPagar"
+            }
+            else -> {
+                "CuentaxCobrar"
+            }
+        }
+    }
 
 
     fun llenarTabla(){
-
+        val table= selectSpinnerTable()
         val con=SQLite(this,"basemovil",null,1)
         val baseDatos=con.writableDatabase
-        val fila=baseDatos.rawQuery("select id,date,concept,value from Ingresos",null)
+        val fila=baseDatos.rawQuery("select id,date,concept,value from $table",null)
         fila.moveToFirst()
         do {
             val registro=LayoutInflater.from(this).inflate(R.layout.item_table,null,false)
@@ -50,3 +66,4 @@ class ActivityBalance : AppCompatActivity() {
 
     }
 }
+
