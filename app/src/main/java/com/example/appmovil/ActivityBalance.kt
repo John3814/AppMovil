@@ -5,15 +5,13 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
-import android.widget.AdapterView
-import android.widget.Spinner
-import android.widget.TableLayout
-import android.widget.TextView
+import android.widget.*
 
 class ActivityBalance : AppCompatActivity(), AdapterView.OnItemSelectedListener {
     private var tlBalance:TableLayout?=null
     private var spinnerListBy = 0
     private var spinnerBySort = 0
+    var balanceID: EditText?=null
     private val con=SQLite(this,"basemovil",null,1)
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -22,28 +20,45 @@ class ActivityBalance : AppCompatActivity(), AdapterView.OnItemSelectedListener 
 
         tlBalance=findViewById(R.id.tlBalance)
 
+        balanceID=findViewById(R.id.TextBalanceID)
+
         findViewById<Spinner>(R.id.spinnerList).onItemSelectedListener=this
+
         findViewById<Spinner>(R.id.spinnerSort).onItemSelectedListener=this
 
+        findViewById<Button>(R.id.buttonSearch).setOnClickListener(){
+            searchConsult()
+        }
+
     }
-    private fun selectSpinnerTable() {
+
+    private fun searchConsult(){
+        val schem =selectSpinnerTable()
+        val fila:Cursor
+        val baseDatos=con.writableDatabase
+        fila=baseDatos.rawQuery("select id,date,concept,value from $schem where id='$balanceID' " ,null)
+        llenarTabla(fila)
+    }
+
+    private fun selectSpinnerTable():String{
         spinnerListBy=findViewById<Spinner>(R.id.spinnerList).selectedItemPosition
 
-        when (spinnerListBy) {
+        return when (spinnerListBy) {
             0 -> {
-                consult("Ingresos")
+                "Ingresos"
             }
             1 -> {
-                consult("Egresos")
+                "Egresos"
             }
             2 -> {
-                consult("CuentaxPagar")
+                "CuentaxPagar"
             }
             else -> {
-                consult("CuentaxCobrar")
+                "CuentaxCobrar"
             }
         }
     }
+
     private fun consult(schem:String){
         spinnerBySort=findViewById<Spinner>(R.id.spinnerSort).selectedItemPosition
         val fila:Cursor
@@ -61,10 +76,8 @@ class ActivityBalance : AppCompatActivity(), AdapterView.OnItemSelectedListener 
                 fila=baseDatos.rawQuery("select id,date,concept,value from $schem where value ORDER BY value desc" ,null)
                 llenarTabla(fila)
             }
-
         }
     }
-
 
     private fun llenarTabla(fila:Cursor){
         tlBalance?.removeAllViews()
@@ -84,7 +97,7 @@ class ActivityBalance : AppCompatActivity(), AdapterView.OnItemSelectedListener 
     }
 
     override fun onItemSelected(p0: AdapterView<*>?, p1: View?, p2: Int, p3: Long) {
-        selectSpinnerTable()
+        consult(selectSpinnerTable())
     }
 
     override fun onNothingSelected(p0: AdapterView<*>?) {
