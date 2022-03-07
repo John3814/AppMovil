@@ -14,6 +14,9 @@ class Cuenta_por_pagarActivity: AppCompatActivity() {
         findViewById<EditText>(R.id.textDatePagar).setOnClickListener(){
             showDatePikerDialog()
         }
+        findViewById<EditText>(R.id.textDatePagarLimit).setOnClickListener(){
+            showDatePikerDialogLimit()
+        }
 
     }
     private fun showDatePikerDialog() {
@@ -24,6 +27,17 @@ class Cuenta_por_pagarActivity: AppCompatActivity() {
     private fun onDateSelected(day:Int,month:Int,year: Int){
         findViewById<EditText>(R.id.textDatePagar).setText("$day/$month/$year")
     }
+
+    private fun showDatePikerDialogLimit() {
+        val datePicker=DatePickerFragmentLimit({day,month,year-> onDateSelectedLimit(year,month,day)})
+        datePicker.show(supportFragmentManager,"datePiker")
+    }
+
+    private fun onDateSelectedLimit(day:Int,month:Int,year: Int){
+        findViewById<EditText>(R.id.textDatePagarLimit).setText("$day/$month/$year")
+    }
+
+
     private fun jumpActivityLobby(){
         val intent: Intent = Intent(this,LobbyActivity::class.java)
         startActivity(intent)
