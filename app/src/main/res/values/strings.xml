@@ -16,6 +16,9 @@
     <string name="textView_id">No° ID:</string>
     <string name="textView_phone_number">No° TELEFONO:</string>
     <string name="textView_date">FECHA:</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="textView_search">BUSCAR:</string>
+    <string name="textView_list_by">LISTAR POR:</string>
+    <string name="textView_sort_by">ORDENAR POR:</string>
+    <string name="button_search">BUSCAR</string>
 </resources>

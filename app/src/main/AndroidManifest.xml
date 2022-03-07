@@ -10,13 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppMovil">
         <activity
-            android:name=".IngresoActivity" />
-        <activity
-            android:name=".EgresoActivity" />
-        <activity
-            android:name=".Cuenta_por_cobrarActivity" />
-        <activity
-            android:name=".Cuenta_por_pagarActivity" />
+            android:name=".ActivityBalance"
+            android:exported="false" />
+        <activity android:name=".IngresoActivity" />
+        <activity android:name=".EgresoActivity" />
+        <activity android:name=".Cuenta_por_cobrarActivity" />
+        <activity android:name=".Cuenta_por_pagarActivity" />
         <activity
             android:name=".LobbyActivity"
             android:exported="true">
@@ -26,10 +25,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-
-
-
     </application>
 
 </manifest>
