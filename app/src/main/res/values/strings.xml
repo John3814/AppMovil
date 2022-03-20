@@ -21,6 +21,10 @@
     <string name="textView_list_by">LISTAR POR:</string>
     <string name="textView_sort_by">ORDENAR POR:</string>
     <string name="button_search">BUSCAR</string>
+    <string name="lobby_summary">RESUMEN</string>
+    <string name="lobby_income">Ingresos</string>
+    <string name="lobby_expenditure">Gastos</string>
+    <string name="lobby_utility">Utilidades</string>
     <string-array name="array_List_By">
         <item>Ingreso</item>
         <item>Egreso</item>

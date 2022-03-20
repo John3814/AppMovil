@@ -16,18 +16,26 @@ class LobbyActivity : AppCompatActivity() {
         findViewById<Button>(R.id.Button_ingreso).setOnClickListener(){
             jumpActivityIngreso()
         }
+
         findViewById<Button>(R.id.Button_egresos).setOnClickListener(){
             jumpActivityEgreso()
         }
+
         findViewById<Button>(R.id.Button_cuentas_cobrar).setOnClickListener(){
             jumpActivityCuentaPorCobrar()
         }
+
         findViewById<Button>(R.id.Button_cuentas_pagar).setOnClickListener(){
             jumpActivityCuentaPorPagar()
         }
+
         findViewById<Button>(R.id.Button_balance).setOnClickListener(){
             jumpActivityBalance()
         }
+
+        income()
+        expenditure()
+        utility()
 
     }
 
@@ -51,6 +59,19 @@ class LobbyActivity : AppCompatActivity() {
         val intent: Intent = Intent(this,ActivityBalance::class.java)
         startActivity(intent)
     }
+
+    private fun income(){
+
+    }
+
+    private fun expenditure(){
+
+    }
+
+    private fun utility(){
+
+    }
+
 
 
 }

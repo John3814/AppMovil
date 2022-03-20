@@ -79,7 +79,7 @@ class ActivityBalance : AppCompatActivity(), AdapterView.OnItemSelectedListener 
                     llenarTabla(fila)
                 }
                 1 -> {
-                    fila = baseDatos.rawQuery("select id,date,concept,value from $schem where date ORDER BY value desc", null)
+                    fila = baseDatos.rawQuery("select id,date,concept,value from $schem where date", null)
                     llenarTabla(fila)
                 }
                 2 -> {
@@ -123,5 +123,3 @@ class ActivityBalance : AppCompatActivity(), AdapterView.OnItemSelectedListener 
         return DatabaseUtils.queryNumEntries(db, tabla) == 0L
     }
 }
-
-
