@@ -2,12 +2,18 @@ package com.example.appmovil
 
 
 import android.content.Intent
+import android.database.DatabaseUtils
+import android.database.sqlite.SQLiteDatabase
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.LayoutInflater
+import android.view.View
 import android.widget.Button
+import android.widget.TextView
 
 
 class LobbyActivity : AppCompatActivity() {
+    private val con = SQLite(this, "basemovil", null, 1)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -61,6 +67,7 @@ class LobbyActivity : AppCompatActivity() {
     }
 
     private fun income(){
+        // puede crear una tabla para los resultados  en sql y  sumar en ella misma  para  depues  ver en  pantalla
 
     }
 
@@ -72,6 +79,10 @@ class LobbyActivity : AppCompatActivity() {
 
     }
 
+    // para ver si  esta  vacio  true para vacio
+    private fun checkEmpty(db: SQLiteDatabase?, tabla: String?): Boolean {
+        return DatabaseUtils.queryNumEntries(db, tabla) == 0L
+    }
 
 
 }

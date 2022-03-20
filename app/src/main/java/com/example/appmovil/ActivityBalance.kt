@@ -119,7 +119,7 @@ class ActivityBalance : AppCompatActivity(), AdapterView.OnItemSelectedListener 
 
     }
 
-    fun checkEmpty(db: SQLiteDatabase?, tabla: String?): Boolean {
+    private fun checkEmpty(db: SQLiteDatabase?, tabla: String?): Boolean {
         return DatabaseUtils.queryNumEntries(db, tabla) == 0L
     }
 }
