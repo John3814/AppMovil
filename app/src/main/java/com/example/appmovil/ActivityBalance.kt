@@ -38,9 +38,15 @@ class ActivityBalance : AppCompatActivity(), AdapterView.OnItemSelectedListener 
         val schem = selectSpinnerTable()
         val baseDatos = con.writableDatabase
         val valu = balanceID?.text
-        val fila =
-            baseDatos.rawQuery("select id,date,concept,value from $schem where id='$valu'", null)
-        llenarTabla(fila)
+        val fila = baseDatos.rawQuery("select id,date,concept,value from $schem where id='$valu'", null)
+
+        if (!checkEmpty(baseDatos, schem) && !valu.toString().isEmpty() && Integer.parseInt(valu.toString())<fila.columnCount ) {
+            llenarTabla(fila)
+        }
+        else{
+            tlBalance?.removeAllViews()
+            Toast.makeText(this, "No se econtro el dato", Toast.LENGTH_LONG).show()
+        }
     }
 
     private fun selectSpinnerTable(): String {
@@ -73,17 +79,11 @@ class ActivityBalance : AppCompatActivity(), AdapterView.OnItemSelectedListener 
                     llenarTabla(fila)
                 }
                 1 -> {
-                    fila = baseDatos.rawQuery(
-                        "select id,date,concept,value from $schem where date ORDER BY value desc",
-                        null
-                    )
+                    fila = baseDatos.rawQuery("select id,date,concept,value from $schem where date ORDER BY value desc", null)
                     llenarTabla(fila)
                 }
                 2 -> {
-                    fila = baseDatos.rawQuery(
-                        "select id,date,concept,value from $schem where value ORDER BY value desc",
-                        null
-                    )
+                    fila = baseDatos.rawQuery("select id,date,concept,value from $schem where value ORDER BY value desc", null)
                     llenarTabla(fila)
                 }
             }
