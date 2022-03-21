@@ -87,7 +87,8 @@ class LobbyActivity : AppCompatActivity() {
         }
 
     }
-    fun doubleOutString(Número: Double): String? {
+
+    private fun doubleOutString(Número: Double): String? {
         return DecimalFormat("#.####################################").format(Número)
     }
 }
