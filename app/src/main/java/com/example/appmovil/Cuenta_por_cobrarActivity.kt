@@ -70,7 +70,7 @@ class Cuenta_por_cobrarActivity: AppCompatActivity() {
         var nombreID=txtNameID?.text.toString()
         var celular=txtPhone?.text.toString()
 
-        if(fecha.isEmpty()==false && concepto.isEmpty()==false && valor.isEmpty()==false ){
+        if(fecha.isEmpty()==false && concepto.isEmpty()==false && valor.isEmpty()==false && fechaLim.isEmpty()==false && nombre.isEmpty()==false && nombreID.isEmpty()==false && celular.isEmpty()==false){
             var registro= ContentValues()
 
             registro.put("date",fecha)

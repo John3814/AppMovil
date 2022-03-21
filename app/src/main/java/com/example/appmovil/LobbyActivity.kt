@@ -65,6 +65,7 @@ class LobbyActivity : AppCompatActivity() {
         val intent: Intent = Intent(this,ActivityBalance::class.java)
         startActivity(intent)
     }
+    private fun balance(){
 
     private fun income(){
         // puede crear una tabla para los resultados  en sql y  sumar en ella misma  para  depues  ver en  pantalla
@@ -84,5 +85,6 @@ class LobbyActivity : AppCompatActivity() {
         return DatabaseUtils.queryNumEntries(db, tabla) == 0L
     }
 
+    }
 
 }
