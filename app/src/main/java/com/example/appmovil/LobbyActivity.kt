@@ -66,30 +66,30 @@ class LobbyActivity : AppCompatActivity() {
         startActivity(intent)
     }
 
-    private fun lobbyoperation() {
+    private fun lobbyoperation(){
         val baseDatos = con.writableDatabase
 
         var fila = baseDatos.rawQuery("select SUM(value) as total from Ingresos ", null)
         fila.moveToNext()
-        val income = fila.getDouble(0)
+        val income=fila.getDouble(0)
         findViewById<TextView>(R.id.textViewIncome).text = income.toString()
 
         fila = baseDatos.rawQuery("select SUM(value) as total from Egresos ", null)
         fila.moveToNext()
-        val expenditure = fila.getDouble(0)
+        val expenditure=fila.getDouble(0)
         findViewById<TextView>(R.id.textViewExpenditure).text = expenditure.toString()
 
-        val utility = income - expenditure
+        val utility=income-expenditure
         findViewById<TextView>(R.id.textViewUtility).text = utility.toString()
 
-        if (utility < 0) {
+        if (utility <0 ){
             findViewById<TextView>(R.id.textViewUtility).setTextColor(Color.parseColor("#ffcc0000"))
-        } else {
+        }
+        else{
             findViewById<TextView>(R.id.textViewUtility).setTextColor(Color.parseColor("#ff669900"))
         }
+
     }
-
-
 
     // para ver si  esta  vacio  true para vacio
     private fun checkEmpty(db: SQLiteDatabase?, tabla: String?): Boolean {
