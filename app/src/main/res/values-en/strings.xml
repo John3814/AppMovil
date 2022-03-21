@@ -36,4 +36,9 @@
         <item>Date</item>
         <item>major to minor</item>
     </string-array>
+    <string name="add_income_screen">ADD INCOME</string>
+    <string name="add_expenditure_screen">ADD EXPENDITURE</string>
+    <string name="balance_screen">BALANCE</string>
+    <string name="add_accounts_receivable_screen">ACCOUNTS RECEIVABLE</string>
+    <string name="add_accounts_payable_screen">ACCOUNTS PAYABLE</string>
 </resources>

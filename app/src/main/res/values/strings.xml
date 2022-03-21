@@ -36,4 +36,9 @@
         <item>Fecha</item>
         <item>Mayor a menor</item>
     </string-array>
+    <string name="add_income_screen">AGREGAR INGRESO</string>
+    <string name="add_expenditure_screen">AGREGAR EGRESO</string>
+    <string name="balance_screen">BALANCE</string>
+    <string name="add_accounts_receivable_screen">CUENTAS POR COBRAR</string>
+    <string name="add_accounts_payable_screen">CUENTAS POR PAGAR</string>
 </resources>

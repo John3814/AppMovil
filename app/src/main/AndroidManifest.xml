@@ -11,11 +11,16 @@
         android:theme="@style/Theme.AppMovil">
         <activity
             android:name=".ActivityBalance"
-            android:exported="false" />
-        <activity android:name=".IngresoActivity" />
-        <activity android:name=".EgresoActivity" />
-        <activity android:name=".Cuenta_por_cobrarActivity" />
-        <activity android:name=".Cuenta_por_pagarActivity" />
+            android:exported="false"
+            android:label="@string/balance_screen"/>
+        <activity android:name=".IngresoActivity"
+            android:label="@string/add_income_screen"/>
+        <activity android:name=".EgresoActivity"
+            android:label="@string/add_expenditure_screen"/>
+        <activity android:name=".Cuenta_por_cobrarActivity"
+            android:label="@string/add_accounts_receivable_screen"/>
+        <activity android:name=".Cuenta_por_pagarActivity"
+            android:label="@string/add_accounts_payable_screen"/>
         <activity
             android:name=".LobbyActivity"
             android:exported="true">
