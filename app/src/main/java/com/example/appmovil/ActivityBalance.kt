@@ -33,6 +33,10 @@ class ActivityBalance : AppCompatActivity(), AdapterView.OnItemSelectedListener 
         findViewById<Button>(R.id.buttonSearch).setOnClickListener() {
             searchConsult()
         }
+        findViewById<Button>(R.id.buttonDelete).setOnClickListener() {
+            eliminar()
+        }
+
     }
 
     private fun searchConsult() {
@@ -103,10 +107,10 @@ class ActivityBalance : AppCompatActivity(), AdapterView.OnItemSelectedListener 
             val tvDate = registro.findViewById<View>(R.id.tvDate) as TextView
             val tvConcept = registro.findViewById<View>(R.id.tvConcept) as TextView
             val tvValue = registro.findViewById<View>(R.id.tvValue) as TextView
-            tvID.setText(fila.getString(0))
-            tvDate.setText(fila.getString(1))
-            tvConcept.setText(fila.getString(2))
-            tvValue.setText(fila.getString(3))
+            tvID.text = fila.getString(0)
+            tvDate.text = fila.getString(1)
+            tvConcept.text = fila.getString(2)
+            tvValue.text = fila.getString(3)
             tlBalance?.addView(registro)
         } while (fila.moveToNext())
 
@@ -142,7 +146,7 @@ class ActivityBalance : AppCompatActivity(), AdapterView.OnItemSelectedListener 
 
     }
 
-    fun eliminar(view:View){
+    fun eliminar() {
         val schem=selectSpinnerTable()
         val baseDatos=con.writableDatabase
         val codigo=balanceID?.text.toString()

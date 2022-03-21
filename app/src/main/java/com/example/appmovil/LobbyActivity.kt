@@ -5,13 +5,11 @@ import android.content.Intent
 import android.database.DatabaseUtils
 import android.database.sqlite.SQLiteDatabase
 import android.graphics.Color
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
 import android.widget.Button
 import android.widget.TextView
-import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
+import java.text.DecimalFormat
 
 
 class LobbyActivity : AppCompatActivity() {
@@ -66,36 +64,32 @@ class LobbyActivity : AppCompatActivity() {
         startActivity(intent)
     }
 
-    private fun lobbyoperation(){
+    private fun lobbyoperation() {
         val baseDatos = con.writableDatabase
 
         var fila = baseDatos.rawQuery("select SUM(value) as total from Ingresos ", null)
         fila.moveToNext()
-        val income=fila.getDouble(0)
-        findViewById<TextView>(R.id.textViewIncome).text = income.toString()
+        val income = fila.getDouble(0)
+        findViewById<TextView>(R.id.textViewIncome).text = doubleOutString(income)
 
         fila = baseDatos.rawQuery("select SUM(value) as total from Egresos ", null)
         fila.moveToNext()
-        val expenditure=fila.getDouble(0)
-        findViewById<TextView>(R.id.textViewExpenditure).text = expenditure.toString()
+        val expenditure = fila.getDouble(0)
+        findViewById<TextView>(R.id.textViewExpenditure).text = doubleOutString(expenditure)
 
-        val utility=income-expenditure
-        findViewById<TextView>(R.id.textViewUtility).text = utility.toString()
+        val utility = income - expenditure
+        findViewById<TextView>(R.id.textViewUtility).text = doubleOutString(utility )
 
-        if (utility <0 ){
+        if (utility < 0) {
             findViewById<TextView>(R.id.textViewUtility).setTextColor(Color.parseColor("#ffcc0000"))
-        }
-        else{
+        } else {
             findViewById<TextView>(R.id.textViewUtility).setTextColor(Color.parseColor("#ff669900"))
         }
 
     }
-
-    // para ver si  esta  vacio  true para vacio
-    private fun checkEmpty(db: SQLiteDatabase?, tabla: String?): Boolean {
-        return DatabaseUtils.queryNumEntries(db, tabla) == 0L
+    fun doubleOutString(Número: Double): String? {
+        return DecimalFormat("#.####################################").format(Número)
     }
-
 }
 
 
