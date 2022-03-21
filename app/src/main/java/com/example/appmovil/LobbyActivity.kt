@@ -4,12 +4,14 @@ package com.example.appmovil
 import android.content.Intent
 import android.database.DatabaseUtils
 import android.database.sqlite.SQLiteDatabase
+import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.widget.Button
 import android.widget.TextView
+import android.widget.Toast
 
 
 class LobbyActivity : AppCompatActivity() {
@@ -39,9 +41,7 @@ class LobbyActivity : AppCompatActivity() {
             jumpActivityBalance()
         }
 
-        income()
-        expenditure()
-        utility()
+        lobbyoperation()
 
     }
 
@@ -65,18 +65,29 @@ class LobbyActivity : AppCompatActivity() {
         val intent: Intent = Intent(this,ActivityBalance::class.java)
         startActivity(intent)
     }
-    private fun balance(){
 
-    private fun income(){
-        // puede crear una tabla para los resultados  en sql y  sumar en ella misma  para  depues  ver en  pantalla
+    private fun lobbyoperation(){
+        val baseDatos = con.writableDatabase
 
-    }
+        var fila = baseDatos.rawQuery("select SUM(value) as total from Ingresos ", null)
+        fila.moveToNext()
+        val income=fila.getDouble(0)
+        findViewById<TextView>(R.id.textViewIncome).text = income.toString()
 
-    private fun expenditure(){
+        fila = baseDatos.rawQuery("select SUM(value) as total from Egresos ", null)
+        fila.moveToNext()
+        val expenditure=fila.getDouble(0)
+        findViewById<TextView>(R.id.textViewExpenditure).text = expenditure.toString()
 
-    }
+        val utility=income-expenditure
+        findViewById<TextView>(R.id.textViewUtility).text = utility.toString()
 
-    private fun utility(){
+        if (utility <0 ){
+            findViewById<TextView>(R.id.textViewUtility).setTextColor(Color.parseColor("#ffcc0000"))
+        }
+        else{
+            findViewById<TextView>(R.id.textViewUtility).setTextColor(Color.parseColor("#ff669900"))
+        }
 
     }
 
@@ -85,6 +96,6 @@ class LobbyActivity : AppCompatActivity() {
         return DatabaseUtils.queryNumEntries(db, tabla) == 0L
     }
 
-    }
-
 }
+
+
