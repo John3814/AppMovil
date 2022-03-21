@@ -89,7 +89,6 @@ class LobbyActivity : AppCompatActivity() {
             findViewById<TextView>(R.id.textViewUtility).setTextColor(Color.parseColor("#ff669900"))
         }
 
-    }
 
     // para ver si  esta  vacio  true para vacio
     private fun checkEmpty(db: SQLiteDatabase?, tabla: String?): Boolean {

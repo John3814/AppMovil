@@ -1,47 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-    <TableRow
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+<TableRow xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:onClick="clickRegistro"
+    android:orientation="vertical">
 
     <TextView
         android:id="@+id/tvID"
         android:layout_width="30dp"
-        android:layout_height="20dp"
-        android:text="TextView" />
+        android:layout_height="27dp"
+        android:layout_weight="0.01"
+        android:text="TextView"
+        android:textSize="20dp" />
 
     <TextView
         android:id="@+id/tvDate"
-        android:layout_width="16dp"
-        android:layout_height="20dp"
-        android:layout_weight="0.11"
-        android:text="TextView" />
+        android:layout_width="wrap_content"
+        android:layout_height="27dp"
+        android:layout_weight="0.10"
+        android:baselineAligned="false"
+        android:text="TextView"
+        android:textSize="20dp" />
 
     <TextView
         android:id="@+id/tvConcept"
         android:layout_width="wrap_content"
-        android:layout_height="19dp"
-        android:layout_weight="0.22"
-        android:text="TextView" />
+        android:layout_height="wrap_content"
+        android:layout_weight="0.10"
+        android:text="TextView"
+        android:textSize="20dp" />
 
     <TextView
         android:id="@+id/tvValue"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_weight="0.11"
-        android:text="TextView" />
+        android:layout_weight="0.10"
+        android:text="TextView"
+        android:textSize="20dp" />
 
     <Button
         android:id="@+id/button"
-        android:layout_width="38dp"
+        android:layout_width="43dp"
         android:layout_height="38dp"
-        android:text="Button" />
+        android:layout_weight="0.10"
+        android:text="Button"
+        android:textSize="20dp" />
 
     <Button
         android:id="@+id/button4"
-        android:layout_width="38dp"
+        android:layout_width="39dp"
         android:layout_height="38dp"
-        android:text="Button" />
+        android:layout_weight="0.10"
+        android:text="Button"
+        android:textSize="20dp" />
 
 </TableRow>

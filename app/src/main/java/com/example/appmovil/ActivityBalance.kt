@@ -3,6 +3,7 @@ package com.example.appmovil
 import android.database.Cursor
 import android.database.DatabaseUtils
 import android.database.sqlite.SQLiteDatabase
+import android.graphics.Color
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -122,4 +123,22 @@ class ActivityBalance : AppCompatActivity(), AdapterView.OnItemSelectedListener 
     private fun checkEmpty(db: SQLiteDatabase?, tabla: String?): Boolean {
         return DatabaseUtils.queryNumEntries(db, tabla) == 0L
     }
+
+    fun clickRegistro(view:View){
+        resetColor()
+        view.setBackgroundColor(Color.GRAY)
+        val registro=view as TableRow
+        val control=registro.getChildAt(0) as TextView
+        val codigo=control.text.toString()
+
+    }
+
+    fun resetColor(){
+        for (i in 0.. tlBalance!!.childCount){
+            val registros=tlBalance?.getChildAt(i)
+            registros?.setBackgroundColor(Color.WHITE)
+        }
+
+    }
+
 }
