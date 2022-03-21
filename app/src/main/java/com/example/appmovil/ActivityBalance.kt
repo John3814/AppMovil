@@ -44,7 +44,7 @@ class ActivityBalance : AppCompatActivity(), AdapterView.OnItemSelectedListener 
             llenarTabla(fila)
         }
         else{
-            tlBalance?.removeAllViews()
+
             Toast.makeText(this, "No se econtro el dato", Toast.LENGTH_LONG).show()
         }
     }
