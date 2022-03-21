@@ -130,6 +130,7 @@ class ActivityBalance : AppCompatActivity(), AdapterView.OnItemSelectedListener 
         val registro=view as TableRow
         val control=registro.getChildAt(0) as TextView
         val codigo=control.text.toString()
+        balanceID?.setText(codigo)
 
     }
 
@@ -138,6 +139,25 @@ class ActivityBalance : AppCompatActivity(), AdapterView.OnItemSelectedListener 
             val registros=tlBalance?.getChildAt(i)
             registros?.setBackgroundColor(Color.WHITE)
         }
+
+    }
+
+    fun eliminar(view:View){
+        val schem=selectSpinnerTable()
+        val baseDatos=con.writableDatabase
+        val codigo=balanceID?.text.toString()
+        if(codigo.isEmpty()==false){
+            val cant=baseDatos.delete("$schem","id='"+codigo+"'",null)
+            if(cant>0){
+                Toast.makeText(this,"el registro fue eliminado",Toast.LENGTH_LONG).show()
+            }else{
+                Toast.makeText(this,"seleccione un registro",Toast.LENGTH_LONG).show()
+            }
+            balanceID?.setText("")
+        }else{
+            Toast.makeText(this,"seleccione un registro",Toast.LENGTH_LONG).show()
+        }
+        consult(selectSpinnerTable())
 
     }
 
