@@ -11,7 +11,8 @@
         tools:ignore="MissingConstraints">
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content">
+
             <ImageView
                 android:id="@+id/imageView11"
                 android:layout_width="wrap_content"
@@ -123,43 +124,85 @@
                 app:layout_constraintVertical_bias="1.0" />
 
 
-            <TableLayout
-                android:id="@+id/tlBalance"
-                android:layout_width="353dp"
-                android:layout_height="397dp"
-                android:layout_marginTop="32dp"
-                android:layout_marginBottom="16dp"
-                app:layout_constraintBottom_toBottomOf="parent"
+            <ScrollView
+                android:id="@+id/scrollView3"
+                android:layout_width="0dp"
+                android:layout_height="400dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:scrollbars="vertical"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/spinnerSort"
-                app:layout_constraintVertical_bias="1.0">
+                app:layout_constraintTop_toBottomOf="@+id/tableRow"
+                tools:ignore="MissingConstraints">
 
-                <TableRow
+                <TableLayout
+                    android:id="@+id/tlBalance"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent" />
+                    android:layout_height="400dp"
+                    android:isScrollContainer="true"
+                    android:scrollbars="vertical">
 
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent" />
-
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent" />
-
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent" />
-            </TableLayout>
+                </TableLayout>
+            </ScrollView>
 
             <Button
                 android:id="@+id/buttonDelete"
-                android:layout_width="60dp"
-                android:layout_height="41dp"
-                android:text="Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:text="BORRAR"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/buttonSearch"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/scrollView3" />
+
+            <TableRow
+                android:id="@+id/tableRow"
+                android:layout_width="0dp"
+                android:layout_height="18dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/spinnerSort"
+                android:background="#128675">
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="10dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.07"
+                    android:text="@string/id"
+                    android:textColor="#000000" />
+
+                <TextView
+                    android:id="@+id/textView12"
+                    android:layout_width="20dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.1"
+                    android:text="@string/textView_date"
+                    android:textColor="#000000" />
+
+                <TextView
+                    android:id="@+id/textView16"
+                    android:layout_width="20dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.15"
+                    android:text="@string/textView_account_concept"
+                    android:textColor="#000000" />
+
+                <TextView
+                    android:id="@+id/textView17"
+                    android:layout_width="20dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.11"
+                    android:text="@string/textView_value"
+                    android:textColor="#000000" />
+            </TableRow>
+
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>

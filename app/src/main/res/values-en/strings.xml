@@ -41,4 +41,5 @@
     <string name="balance_screen">BALANCE</string>
     <string name="add_accounts_receivable_screen">ACCOUNTS RECEIVABLE</string>
     <string name="add_accounts_payable_screen">ACCOUNTS PAYABLE</string>
+    <string name="id">ID</string>
 </resources>
