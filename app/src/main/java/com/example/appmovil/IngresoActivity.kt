@@ -7,6 +7,7 @@ import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 
+
 class IngresoActivity: AppCompatActivity()  {
     var txtDate:EditText?=null
     var txtConcept:EditText?=null

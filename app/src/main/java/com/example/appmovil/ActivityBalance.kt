@@ -45,12 +45,12 @@ class ActivityBalance : AppCompatActivity(), AdapterView.OnItemSelectedListener 
         val valu = balanceID?.text
         val fila = baseDatos.rawQuery("select id,date,concept,value from $schem where id='$valu'", null)
 
-        if (!checkEmpty(baseDatos, schem) && !valu.toString().isEmpty() && Integer.parseInt(valu.toString())<fila.columnCount ) {
+        if (!checkEmpty(baseDatos, schem) && valu.toString().isNotEmpty() && fila.moveToFirst()) {
             llenarTabla(fila)
         }
         else{
-
             Toast.makeText(this, "No se econtro el dato", Toast.LENGTH_LONG).show()
+            consult(selectSpinnerTable())
         }
     }
 
